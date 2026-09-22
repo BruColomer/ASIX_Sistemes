@@ -311,17 +311,11 @@ Analitza aquesta afirmació:
 
 Explica amb les teves paraules què significa.
 
----
-
----
+    Si un usuari no ha de trevallar amb un recurs o modifar-lo llabors no hauria de poder.
 
 Posa un exemple relacionat amb MusicCloud.
 
----
-
----
-
----
+    Un trevallador de producció musical no te cap necesitat de veure les carpetes de suport tècnic.
 
 # 12. Pregunta final
 
@@ -331,15 +325,11 @@ Quina de les dues estratègies consideres més adequada?
 
 ☐ Assignar permisos individualment a cada usuari.
 
-☐ Organitzar els usuaris segons les seves necessitats i assignar permisos a aquests conjunts.
+x  Organitzar els usuaris segons les seves necessitats i assignar permisos a aquests conjunts.
 
 Justifica la resposta.
 
----
-
----
-
----
+    Es molt mes escalable fent-ho de aquesta manera, quan son pocs trevalladors encara es gestionable configurar-los a cada un individualment pero quan augmenta la empresa poden apareixer problemes o descuits per causa de haber-los de configurar manualment. 
 
 Jo **no faria obligatori que acabessin tota la fitxa abans d'explicar res**. La utilitzaria de manera sincronitzada amb la classe:
 
