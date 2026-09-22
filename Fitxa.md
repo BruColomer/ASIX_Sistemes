@@ -223,9 +223,7 @@ S'el cambia de departament
 
 Com anomenaries aquests conjunts de persones?
 
----
-
----
+Grups
 
 # 7. Primera proposta per a MusicCloud
 
@@ -235,11 +233,11 @@ A partir de l'organització de l'empresa, proposa els primers conjunts de person
 
 |Nom proposat|Qui hi pertanyeria?|Per què existeix aquest conjunt?|
 |---|---|---|
-||||
-||||
-||||
-||||
-||||
+|Suport tecnic|els trevalladors del departament de suport tècnic i un sub grup per el cap|per gesitonar els permisos conjunts de aquest departament|
+|Direcicó|els trevalladors del departament de sdirecció i un sub grup per el cap|per gesitonar els permisos conjunts de aquest departament|
+|Administraicó|els trevalladors del departament de administració i un sub grup per el cap|per gesitonar els permisos conjunts de aquest departament|
+|Producció musical|els trevalladors del departament de  producció musical i un sub grup per el cap|per gesitonar els permisos conjunts de aquest departament|
+|Informàtica|els trevalladors del departament de informatica i un sub grup per el cap|per gesitonar els permisos conjunts de aquest departament|
 
 ---
 
@@ -250,7 +248,7 @@ Laia treballa al departament d'Administració, però també és la responsable d
 És suficient que pertanyi només al conjunt `Administració`?
 
 ☐ Sí  
-☐ No
+x  No
 
 Per què?
 
