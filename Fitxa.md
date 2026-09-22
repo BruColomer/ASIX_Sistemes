@@ -1,8 +1,8 @@
 # Fitxa 1 — Anàlisi inicial de MusicCloud
 
-**Nom i cognoms:** __________________________________________  
-**Data:** __________________  
-**Equip / parella:** _________________________________________
+**Nom i cognoms:** Bru Colomer  
+**Data:** 9/17/2026  
+
 
 ## Objectiu
 
@@ -29,37 +29,37 @@ Completa la taula següent.
 
 |Persona|Departament|Funció / responsabilitat|Necessita privilegis especials? Per què?|
 |---|---|---|---|
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+|Aina Ciurans|Direcció|Usuari administrador dels altres departaments||
+|Rut Tornil|Direcció|Usuari administrador dels altres departaments||
+|Dídac Gassó|Administraicó|Usuari adminitrador||
+|Laia Macias|Administraicó|Cap de departament usuari administrador del departament.|Persmisos per administrar tot el departament|
+|Estel birosta|Suport tècnic|Usuari standard|Permisos suficients per poder administrar carpetes especifiques per poder donar suport.|
+|Aina Zuriguel|Suport tècnic|Usuari standard|Permisos suficients per poder administrar carpetes especifiques per poder donar suport.|
+|Lluïsa Richart|Suport tècnic|Cap de departament usuari administrador del departament.|Persmisos per administrar tot el departament|
+|Roser alberch|Producció musical	|Usuari standard||
+|Guillem Adella|Producció musical	|Usuari standard||
+|Meritxell Reglat|Producció musical	|Cap de departament usuari administrador del departament.|Persmisos per administrar tot el departament|
+|Alícia Monclús|Producció musical	|Usuari standard||
+|Carles Molins|Producció musical	|Usuari standard||
+|Eulàlia Galcera|Producció musical	|Usuari standard||
+|Talia Costas|Informàtica|Cap de departament usuari administrador del departament.|Persmisos per administrar tot el departament i poder administar la resta de departaments (no cal veure el contingut) mes sino les carpetes|
+|Alex Soriano|Informàtica|Usuari administrador|poder administar la resta de departaments (no cal veure el contingut) mes sino les carpetes|
+
 
 ### 1.1. Reflexió
 
 Quines diferències observes entre un **treballador**, un **departament** i una **funció o responsabilitat**?
 
----
-
----
-
----
+    Un treballador es la persona individual, el departament es el conjunt de trevalladors que trevallen en un mateix ambit, i la funció o responsabilitat es la tasca que te que fer cada trevallador.
 
 Hi ha persones que, pel seu càrrec o funció, necessiten accessos diferents dels altres membres del seu departament?
 
-☐ Sí  
+x Sí  
 ☐ No
 
 Posa'n algun exemple:
 
----
-
----
-
----
+    si, els caps de departament han de poder accedir a tots els recursos del departament, i tenir els permisos sobre aquests. 
 
 # 2. Recursos de l'empresa
 
@@ -69,12 +69,12 @@ Classifica alguns dels recursos següents segons la seva finalitat.
 
 |Recurs|Qui creus que l'hauria d'utilitzar?|Per a què?|
 |---|---|---|
-|`/empresa/comu/intercanvi`|||
-|`/empresa/comu/comunicats`|||
-|`/empresa/departaments/administracio/compartida`|||
-|`/empresa/departaments/administracio/gestio_departament`|||
-|`/empresa/projectes/campanya_estiu`|||
-|`/empresa/administracio_sistema/backups`|||
+|`/empresa/comu/intercanvi`|(compartida entre tots) (lectura i escritura a thotom)|Perque aquesta carpeta es fara servir per tots els trevalladors i entre tots els trevalladors per compartir carpetes.|
+|`/empresa/comu/comunicats`|(cap department i direcio escritura i lectura externs no lectura)|Son comunicats, no hi ha interes en els trevalladors per modificar-ho, nomes direcció sol publicar comunicats o els mateixos caps.|
+|`/empresa/departaments/administracio/compartida`|(lectura i escritura direcció lectura informatics poder gestionar la carpeta pero no veure contingut)|Aquest estil de carpetes els trevalladors tindran lectura i escritura i direcció tindra access a lectura.|
+|`/empresa/departaments/administracio/gestio_departament`|(cap de departament lectura i escritura)|El cap tindra lectura i escritura|
+|`/empresa/projectes/campanya_estiu`|(es un nom mol generic per la qual cosa no ho se)||
+|`/empresa/administracio_sistema/backups`|(Els informatics lectura i escritura)|Perque no podem donar access a la informaicó que hi pot haber a els backups a tots els trevalladors, si s'en necesita un es comunica als informatics i aquest s'encarreguen de recuperar la informaicó.|
 
 ---
 

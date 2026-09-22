@@ -1,0 +1,47 @@
+
+
+
+/empresa
+├── comu
+│   ├── intercanvi (compartida entre tots) (lectura i escritura a thotom)
+│   ├── plantilles	
+│   ├── comunicats	(cap department i direcio escritura i lectura externs no lectura)
+│   └── interdepartamental 
+│
+├── departaments
+│   ├── direccio
+│   │   ├── compartida
+│   │   └── confidencial
+│   │
+│   ├── administracio
+│   │   ├── compartida (lectura i escritura direcció lectura informatics poder gestionar la carpeta pero no veure contingut)
+│   │   ├── gestio_departament (cap lectura i escritura)
+│   │   └── documentacio_interna
+│   │
+│   ├── suport_tecnic
+│   │   ├── compartida
+│   │   ├── gestio_departament
+│   │   ├── incidencies
+│   │   └── scripts
+│   │
+│   └── produccio_musical
+│       ├── compartida
+│       ├── gestio_departament
+│       ├── artistes
+│       └── cataleg
+│
+├── usuaris
+│   ├── usuari1
+│   ├── usuari2
+│   └── usuari3
+│   └── ....
+│
+├── projectes
+│   ├── campanya_estiu 
+│   └── migracio_servidors
+│
+└── administracio_sistema
+    ├── backups
+    ├── logs
+    ├── configuracions
+    └── inventari
