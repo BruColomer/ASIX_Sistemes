@@ -134,19 +134,19 @@ David → lectura/escriptura
 
 Què passaria si l'empresa tingués **100 treballadors** amb el mateix tipus d'accés?
 
-Es tardaria molt en configurar-los i no hi hauria control de permisos minims per els trevalladors, podrien surgir problemes amb els trevallador accedint a carpetes amb informaicó restringuda o modificar aquestes mateixes. 
+    Es tardaria molt en configurar-los i no hi hauria control de permisos minims per els trevalladors, podrien surgir problemes amb els trevallador accedint a carpetes amb informaicó restringuda o modificar aquestes mateixes. 
 
 ### 4.2.
 
 Què passaria cada vegada que s'incorporés una persona nova?
 
-S'ahuria de assingar-li els permisos a totes les carpetes.
+    S'ahuria de assingar-li els permisos a totes les carpetes.
 
 ### 4.3.
 
 Què passaria quan una persona canviés de departament?
 
-Manualment s'auria de configurar a aquesta persona els permisos a les carpetes corresponents de aquest nou departament
+    Manualment s'auria de configurar a aquesta persona els permisos a les carpetes corresponents de aquest nou departament
 
 ### 4.4.
 
@@ -154,7 +154,7 @@ Proposa una manera de gestionar aquestes persones conjuntament.
 
 No cal que coneguis encara el nom tècnic de la solució.
 
-Es pot fer per grups fent un grup departament i dins el grup departament posar-hi tots els trevalladors, dins aquest grup tambe hi hauria el group cap departament on hi haura el cap d'aquest (que necesita permisos mes elevats)
+    Es pot fer per grups fent un grup departament i dins el grup departament posar-hi tots els trevalladors, dins aquest grup tambe hi hauria el group cap departament on hi haura el cap d'aquest (que necesita permisos mes elevats)
 
 # 5. Canvis a MusicCloud
 
@@ -166,11 +166,11 @@ Dídac deixa Administració i passa a Producció musical.
 
 Quins accessos hauria de perdre?
 
-manualment treure els seus permisos a totes les carpetes de adminsitració.
+    manualment treure els seus permisos a totes les carpetes de adminsitració.
 
 Quins accessos hauria d'obtenir?
 
-Es don manualment tots els accessos a les carpetes de producció musical 
+    Es don manualment tots els accessos a les carpetes de producció musical 
 
 ### Cas B
 
@@ -178,7 +178,7 @@ S'incorpora una nova treballadora al departament d'Administració.
 
 Quins accessos caldria configurar?
 
-Es ba a totes les carpetes de administraicó i es configura manualment a cada una els permisos corresponents.
+    Es ba a totes les carpetes de administraicó i es configura manualment a cada una els permisos corresponents.
 
 ### Cas C
 
@@ -186,7 +186,7 @@ Pere Espinalt deixa de col·laborar amb MusicCloud.
 
 Què hauríem de fer amb els seus accessos?
 
-Treure els permisos a totes les carpetes on ell tenir permisos.
+    Treure els permisos a totes les carpetes on ell tenir permisos.
 
 # 6. Busquem una solució millor
 
@@ -211,19 +211,19 @@ Administració → carpeta_administracio → L/E
 
 Quin avantatge té aquesta solució respecte a donar permisos persona per persona?
 
-Els permisos a les carpetes nomes s'ha de configurar un cop, un cop esta fet es tan facil com afegirla al departament corresponent. 
+    Els permisos a les carpetes nomes s'ha de configurar un cop, un cop esta fet es tan facil com afegirla al departament corresponent. 
 
 ### 6.2.
 
 Si Dídac passa d'Administració a Producció musical, què caldria modificar?
 
-S'el cambia de departament
+    S'el cambia de departament
 
 ### 6.3.
 
 Com anomenaries aquests conjunts de persones?
 
-Grups
+    Grups
 
 # 7. Primera proposta per a MusicCloud
 
@@ -252,11 +252,11 @@ x  No
 
 Per què?
 
-Perque ella ha de tenir uns permisos superiors als que tindra els de administraicó
+    Perque ella ha de tenir uns permisos superiors als que tindra els de administraicó
 
 Quina possible solució proposes?
 
-Crear un grup dins administraió amb el cap de departament
+    Crear un grup dins administraió amb el cap de departament
 
 # 9. Un altre cas
 
