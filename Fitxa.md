@@ -252,17 +252,11 @@ x  No
 
 Per què?
 
----
-
----
+Perque ella ha de tenir uns permisos superiors als que tindra els de administraicó
 
 Quina possible solució proposes?
 
----
-
----
-
----
+Crear un grup dins administraió amb el cap de departament
 
 # 9. Un altre cas
 
@@ -275,15 +269,11 @@ Campanya Estiu
 Creus que hauríem de canviar-les de departament?
 
 ☐ Sí  
-☐ No
+x  No
 
 Si no, com podríem donar-los accés als recursos del projecte?
 
----
-
----
-
----
+    Posar els grups corresponents a els recursos i carpetes del projecte
 
 # 10. Conclusions
 
@@ -293,27 +283,25 @@ Completa les frases amb les teves paraules.
 
 Un usuari representa:
 
----
+    una persona fisica
 
 ### Recurs
 
 Un recurs és:
 
----
+    Un fitxer o document
 
 ### Permís
 
 Un permís determina:
 
----
+    Els accesos que te un usuari o grup a un recurs
 
 ### Grup
 
 Un grup serveix per:
 
----
-
----
+    Juntar els permisos que varis usuaris tinrien repetits, per agrupar-los i fer mes facil la gestio d'aquests
 
 # 11. Regla de mínim privilegi
 
