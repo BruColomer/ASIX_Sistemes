@@ -120,17 +120,17 @@ Indica:
 
 **En quina OU ubicaries el seu compte?**
 
----
+    A Usuaris / Administració
 
 **A quins grups podria pertànyer?**
 
----
+    Al grup de G_Administració i al grup de Campanya Estiu
 
 ---
 
 ### Per què no és contradictori que estigui en una OU però pertanyi a diversos grups?
 
----
+    Una element dins de una UO no pot estar en cap mes UO pero un element dins de un Grup pot pertanyer a mes grups
 
 ---
 
