@@ -27,23 +27,23 @@ Consulta la informació disponible sobre els departaments, treballadors i perfil
 
 Completa la taula següent.
 
-|Persona|Departament|Funció / responsabilitat|Necessita privilegis especials? Per què?|
-|---|---|---|---|
-|Aina Ciurans|Direcció|Usuari administrador dels altres departaments||
-|Rut Tornil|Direcció|Usuari administrador dels altres departaments||
-|Dídac Gassó|Administraicó|Usuari adminitrador||
-|Laia Macias|Administraicó|Cap de departament usuari administrador del departament.|Persmisos per administrar tot el departament|
-|Estel birosta|Suport tècnic|Usuari standard|Permisos suficients per poder administrar carpetes especifiques per poder donar suport.|
-|Aina Zuriguel|Suport tècnic|Usuari standard|Permisos suficients per poder administrar carpetes especifiques per poder donar suport.|
-|Lluïsa Richart|Suport tècnic|Cap de departament usuari administrador del departament.|Persmisos per administrar tot el departament|
-|Roser alberch|Producció musical	|Usuari standard||
-|Guillem Adella|Producció musical	|Usuari standard||
-|Meritxell Reglat|Producció musical	|Cap de departament usuari administrador del departament.|Persmisos per administrar tot el departament|
-|Alícia Monclús|Producció musical	|Usuari standard||
-|Carles Molins|Producció musical	|Usuari standard||
-|Eulàlia Galcera|Producció musical	|Usuari standard||
-|Talia Costas|Informàtica|Cap de departament usuari administrador del departament.|Persmisos per administrar tot el departament i poder administar la resta de departaments (no cal veure el contingut) mes sino les carpetes|
-|Alex Soriano|Informàtica|Usuari administrador|poder administar la resta de departaments (no cal veure el contingut) mes sino les carpetes|
+| Persona          | Departament       | Funció / responsabilitat                                 | Necessita privilegis especials? Per què?                                                                                                   |
+| ---------------- | ----------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Aina Ciurans     | Direcció          | Usuari administrador dels altres departaments            |                                                                                                                                            |
+| Rut Tornil       | Direcció          | Usuari administrador dels altres departaments            |                                                                                                                                            |
+| Dídac Gassó      | Administraicó     | Usuari adminitrador                                      |                                                                                                                                            |
+| Laia Macias      | Administraicó     | Cap de departament usuari administrador del departament. | Persmisos per administrar tot el departament                                                                                               |
+| Estel birosta    | Suport tècnic     | Usuari standard                                          | Permisos suficients per poder administrar carpetes especifiques per poder donar suport.                                                    |
+| Aina Zuriguel    | Suport tècnic     | Usuari standard                                          | Permisos suficients per poder administrar carpetes especifiques per poder donar suport.                                                    |
+| Lluïsa Richart   | Suport tècnic     | Cap de departament usuari administrador del departament. | Persmisos per administrar tot el departament                                                                                               |
+| Roser alberch    | Producció musical | Usuari standard                                          |                                                                                                                                            |
+| Guillem Adella   | Producció musical | Usuari standard                                          |                                                                                                                                            |
+| Meritxell Reglat | Producció musical | Cap de departament usuari administrador del departament. | Persmisos per administrar tot el departament                                                                                               |
+| Alícia Monclús   | Producció musical | Usuari standard                                          |                                                                                                                                            |
+| Carles Molins    | Producció musical | Usuari standard                                          |                                                                                                                                            |
+| Eulàlia Galcera  | Producció musical | Usuari standard                                          |                                                                                                                                            |
+| Talia Costas     | Informàtica       | Cap de departament usuari administrador del departament. | Persmisos per administrar tot el departament i poder administar la resta de departaments (no cal veure el contingut) mes sino les carpetes |
+| Alex Soriano     | Informàtica       | Usuari administrador                                     | poder administar la resta de departaments (no cal veure el contingut) mes sino les carpetes                                                |
 
 
 ### 1.1. Reflexió
