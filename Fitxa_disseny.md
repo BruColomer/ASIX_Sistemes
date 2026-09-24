@@ -13,17 +13,15 @@ Indica quins tipus d'objectes consideres que ha de contenir el servei de directo
 
 |Tipus d'objecte|Exemples a MusicCloud|
 |---|---|
-|Usuaris||
-|Grups||
-|Equips||
-|Servidors||
-|Comptes d'aplicacions o serveis||
+|Usuaris|USR_ACiurans|
+|Grups|GR_Administraicó|
+|Equips|PC_MAC|
+|Servidors|SRV_MAC|
+|Comptes d'aplicacions o serveis|SVC_Nom|
 
 Hi afegiries algun altre tipus d'objecte?
 
----
-
----
+    Sí, com hara objectes per movils, portatils, dispositius de xarxa (NAS, SAI, Routers, Switchos)
 
 # 2. Organització mitjançant unitats organitzatives
 
@@ -31,11 +29,15 @@ Proposa les **unitats organitzatives (OU)** principals que utilitzaries a MusicC
 
 |OU|Què contindrà?|Per què la crees?|
 |---|---|---|
-||||
-||||
-||||
-||||
-||||
+|Usuaris|Tots els comptes de persones|Tenir-los en un sol lloc i poder aplicar-hi GPO i delegar la gestió.|
+|Usuaris / departament|Els usuaris del departament corresponent|Separar-los per departament per aplicar polítiques i delegar la gestió.|
+|Usuaris / Externs|Els treballadors externs|Aplicar-hi polítiques més restrictives.|
+|Equips|Tots els dispositius informàtics|Aplicar GPO d'equip i organitzar els dispositius.|
+|Equips / Clients|Sobretaula, portàtils|Aplicar polítiques diferents segons el tipus d'equip.|
+|Equips / Servidors|Els servidors de l'empresa|Tenen polítiques de seguretat i manteniment específiques.|
+|Equips / Xarxa|Els dispositius de xarxa (switches, routers, punts d'accés, impressores de xarxa)|Separar-los dels clients i dels servidors, perquè tenen una gestió i una seguretat diferents.|
+|Grups|Els grups de seguretat, per exemple un per departament|Separar-los dels usuaris i equips.|
+|Comptes de servei|Comptes que fan servir aplicacions o serveis|Controlar-los i auditar-los a part, perquè no són persones.|
 
 ## 2.1. Organització dels usuaris
 
@@ -44,7 +46,35 @@ Dibuixa l'estructura que utilitzaries per organitzar els usuaris de MusicCloud.
 ```text
 MusicCloud
 │
-└──
+└── Usuaris
+    ├── Direccio
+    │   ├── Aina Ciurans
+    │   └── Rut Tornil
+    │
+    ├── Administracio
+    │   ├── Dídac Gassó
+    │   └── Laia Macias
+    │
+    ├── Suport_Tecnic
+    │   ├── Estel Birosta
+    │   ├── Aina Zuriguel
+    │   └── Lluïsa Richart
+    │
+    ├── Produccio_Musical
+    │   ├── Roser Alberch
+    │   ├── Guillem Adella
+    │   ├── Meritxell Reglat
+    │   ├── Alícia Monclús
+    │   ├── Carles Molins
+    │   └── Eulàlia Galcera
+    │
+    ├── Informatica
+    │   ├── Talia Costas
+    │   └── Alex Soriano
+    │
+    └── Externs
+        ├── Pere Espinalt
+        └── Neus Bages
 ```
 
 ---
@@ -55,27 +85,23 @@ Indica quina opció utilitzaries principalment en cada cas.
 
 |Necessitat|OU|Grup|
 |---|:-:|:-:|
-|Organitzar els treballadors d'Administració|☐|☐|
-|Donar accés a la carpeta d'Administració|☐|☐|
-|Organitzar els ordinadors clients|☐|☐|
-|Identificar les persones que participen en Campanya Estiu|☐|☐|
-|Organitzar els servidors|☐|☐|
-|Donar privilegis als administradors del sistema|☐|☐|
-|Organitzar els comptes utilitzats per aplicacions|☐|☐|
+|Organitzar els treballadors d'Administració|x|☐|
+|Donar accés a la carpeta d'Administració|☐|x|
+|Organitzar els ordinadors clients|☐|x|
+|Identificar les persones que participen en Campanya Estiu|x|☐|
+|Organitzar els servidors|x|☐|
+|Donar privilegis als administradors del sistema|☐|x|
+|Organitzar els comptes utilitzats per aplicacions|x|☐|
 
 ### Explica amb les teves paraules la diferència principal entre una OU i un grup.
 
 **OU:**
 
----
-
----
+    Una OU ens permet organitzar els diferents elements per poder tenir un control i documentaicó del que tenim. A les OU un element nomes pot estar a un lloc a la begada. 
 
 **Grup:**
 
----
-
----
+    Un Grup ens permet gestionar / donar permisos a un conjunt de elements conjuntament. Un element pot estar env aris grups a la begada.
 
 ---
 
