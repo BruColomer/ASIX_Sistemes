@@ -250,17 +250,14 @@ Escull **dues decisions** del teu DIT que consideris importants i justifica-les.
 
 ### Decisió 1
 
----
+    Comptes de servei
 
 **Justificació:**
 
----
-
----
-
+    Aqui es poden representar les aplicacióons o serveis que necessiten identificar-se en un sistema, com hara un servei de backup que es digui SVC_Backup.
 ### Decisió 2
 
----
+    Compte de 
 
 **Justificació:**
 
