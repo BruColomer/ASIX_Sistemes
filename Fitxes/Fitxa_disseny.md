@@ -191,10 +191,55 @@ Ha de mostrar, com a mínim:
 ```text
 MusicCloud
 │
+├── Usuaris
+│   ├── Direccio
+│   │   ├── USR_ACiurans
+│   │   └── USR_RTornil
+│   ├── Administracio
+│   │   ├── USR_DGasso
+│   │   └── USR_LMacias
+│   ├── Suport_Tecnic
+│   │   ├── USR_EBirosta
+│   │   ├── USR_AZuriguel
+│   │   └── USR_LRichart
+│   ├── Produccio_Musical
+│   │   ├── USR_RAlberch
+│   │   ├── USR_GAdella
+│   │   ├── USR_MReglat
+│   │   ├── USR_AMonclus
+│   │   ├── USR_CMolins
+│   │   └── USR_EGalcera
+│   ├── Informatica
+│   │   ├── USR_TCostas
+│   │   └── USR_ASoriano
+│   └── Externs
+│       ├── USR_PEspinalt
+│       └── USR_NBages
 │
+├── Equips
+│   ├── Clients
+│   │   ├── PC_...        (sobretaula)
+│   │   └── PT_...        (portàtils)
+│   ├── Servidors
+│   │   └── SRV_...       (fitxers, backups, directori...)
+│   └── Xarxa
+│       └── NET_...       (switches, routers, punts d'accés, NAS, SAI, impressores)
 │
+├── Grups
+│   ├── GR_Direccio
+│   ├── GR_Administracio
+│   │   └── GR_Administracio_Caps
+│   ├── GR_Suport_Tecnic
+│   │   └── GR_Suport_Tecnic_Caps
+│   ├── GR_Produccio_Musical
+│   │   └── GR_Produccio_Musical_Caps
+│   ├── GR_Informatica
+│   │   └── GR_Informatica_Admins
+│   ├── GR_Externs
+│   └── GR_Campanya_Estiu
 │
-│
+└── Comptes_Servei
+    └── SVC_...           (comptes d'aplicacions i serveis, ex.: SVC_Backup)
 ```
 
 ---
