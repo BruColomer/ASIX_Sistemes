@@ -144,7 +144,7 @@ Explica breument què entens per **servei de directori**.
 
 Quin problema resol a MusicCloud?
 
-
+    Permet organitzar tots els trevalladors i molts dels serveis de xarxa en un sol servidor, tambe esta protegida devant un augment de trevalladors a l'empresa. 
 
 # 6. LDAP
 
@@ -152,20 +152,20 @@ Completa les frases següents.
 
 **LDAP és:**
 
----
+    LDAP és un protocol que permet representar la empresa (usuaris, grups, equips, etc.) en un directori jerarquic, però no imposa com s'ha d'organitzar. Els serveis de la xarxa (correu, VPN, Git...) el consulten per identificar els usuaris i saber a quins grups pertanyen, i així decidir què poden fer.
 
 **LDAP no és:**
 
----
+    LDAP no es el programa com a tal, com hara active directory, sino una definició de com hauria de ser aquest i com s'hauria d'organitzar. 
 
 Indica si les afirmacions són certes o falses.
 
 |Afirmació|C|F|
 |---|:-:|:-:|
-|LDAP és sinònim d'Active Directory|☐|☐|
-|LDAP permet accedir i consultar informació d'un directori|☐|☐|
-|OpenLDAP és una implementació d'un servei de directori|☐|☐|
-|Active Directory utilitza LDAP, entre altres tecnologies|☐|☐|
+|LDAP és sinònim d'Active Directory|x|☐|
+|LDAP permet accedir i consultar informació d'un directori|☐|x|
+|OpenLDAP és una implementació d'un servei de directori|x|☐|
+|Active Directory utilitza LDAP, entre altres tecnologies|x|☐|
 
 ---
 
