@@ -140,17 +140,11 @@ Indica:
 
 Explica breument què entens per **servei de directori**.
 
----
-
----
+    Un servei de directori es un servei que centralitza a tots els dispositius conectats / recursos de la xarxa. Aquest et permet trevallar sobre ells com hara gestionan els seus permisos.
 
 Quin problema resol a MusicCloud?
 
----
 
----
-
----
 
 # 6. LDAP
 
