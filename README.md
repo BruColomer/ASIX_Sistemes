@@ -8,5 +8,5 @@ MusicCloud és una empresa de producció musical que necessita reorganitzar la s
 
 ## Contingut
 
-- **01.Disseny**: anàlisi de l'empresa i disseny del servei de directori (OU, grups, LDAP i DIT).
-- **02.Powershell**: exercicis de PowerShell per automatitzar l'administració dels sistemes.
+- **Disseny**: anàlisi de l'empresa i disseny del servei de directori (OU, grups, LDAP i DIT).
+- **Powershell**: exercicis de PowerShell per automatitzar l'administració dels sistemes.
