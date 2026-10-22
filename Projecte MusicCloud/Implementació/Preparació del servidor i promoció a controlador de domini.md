@@ -72,27 +72,36 @@ Definiu una contrasenya segura per al mode de restauració de serveis de directo
 Després del reinici, comproveu:
 
 1. Que el servidor s’anomena `SRV-AD-01`.
-    
+
+>![Nom del servidor](<img/Preparació del servidor i promoció a controlador de domini_img/04_Nom_servidor.png>)
+
 2. Que el domini `musiccloud.local` existeix.
-    
+
+>![Domini musiccloud.local](<img/Preparació del servidor i promoció a controlador de domini_img/04_Domini_existeix.png>)
+
 3. Que el servidor és controlador de domini.
-    
+
+>![Controlador de domini](<img/Preparació del servidor i promoció a controlador de domini_img/04_Controlador_de_domini.png>)
+
 4. Que el servei DNS està instal·lat.
-    
+
+>![DNS instal·lat](<img/Preparació del servidor i promoció a controlador de domini_img/04_DNS_instalat.png>)
+
 5. Que el DNS resol correctament el domini.
-    
-    
+
+>![Resolució DNS](<img/Preparació del servidor i promoció a controlador de domini_img/04_Resolucio_DNS.png>)
+
 Completeu la taula següent. Adjunta la comanda que has utilitzat per a cada una de les comprovacions.
 
 | Comprovació                          | Resultat |
 | ------------------------------------ | -------- |
-| Nom del servidor                     |          |
-| IP fixa configurada                  |          |
-| AD DS instal·lat                     |          |
-| Domini creat                         |          |
-| DNS instal·lat                       |          |
-| Resolució de `musiccloud.local`      |          |
-| Eines d’Active Directory disponibles |          |
+| Nom del servidor                     | `SRV-AD-01` (`hostname`) |
+| IP fixa configurada                  | `10.0.2.10` (`Get-NetIPConfiguration`) |
+| AD DS instal·lat                     | `Installed` (`Get-WindowsFeature AD-Domain-Services`) |
+| Domini creat                         | `musiccloud.local` (`(Get-WmiObject Win32_ComputerSystem).Domain`) |
+| DNS instal·lat                       | `Installed` (`Get-WindowsFeature DNS`) |
+| Resolució de `musiccloud.local`      | `10.0.2.10` i `192.168.56.10` (`Resolve-DnsName musiccloud.local`) |
+| Eines d’Active Directory disponibles | Mòdul `ActiveDirectory` (`Get-Module -ListAvailable ActiveDirectory`) |
 
 ## Preguntes
 
