@@ -46,6 +46,10 @@ Completeu la taula següent:
 
 Localitzeu i utilitzeu el procediment adequat per instal·lar el rol AD DS i promocionar el servidor a controlador de domini. Documenteu breument les comandes o passos utilitzats.
 
+>executem la seguent comanda per instalar el rol de AD DS
+>![Instal·lació del rol AD DS](<img/Preparació del servidor i promoció a controlador de domini_img/02_Instalacio_rol_AD_DS.png>)
+>![Resultat de la instal·lació](<img/Preparació del servidor i promoció a controlador de domini_img/02_Resultat_instalacio_rol_AD_DS.png>)
+
 ### Part 3. Promoció a controlador de domini
 Promocioneu el servidor a controlador de domini amb les opcions següents:
 
