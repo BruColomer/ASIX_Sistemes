@@ -62,7 +62,11 @@ Promocioneu el servidor a controlador de domini amb les opcions següents:
 | Nom NetBIOS                            | `MUSICCLOUD`       |
 | Controlador de domini de només lectura | No                 |
 | Reinici final                          | Sí                 |
+
 Definiu una contrasenya segura per al mode de restauració de serveis de directori.
+
+>![Promoció a controlador de domini](<img/Preparació del servidor i promoció a controlador de domini_img/03_Promocio_controlador_domini.png>)
+
 ### Part 4. Verificació
 
 Després del reinici, comproveu:
