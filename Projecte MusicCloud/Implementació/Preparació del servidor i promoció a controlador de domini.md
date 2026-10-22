@@ -36,11 +36,12 @@ Completeu la taula següent:
 
 | Paràmetre        | Valor configurat |
 | ---------------- | ---------------- |
-| Adreça IP        |                  |
-| Màscara          |                  |
-| Porta d’enllaç   |                  |
-| DNS preferit     |                  |
-| Nom del servidor |                  |
+| Adreça IP        | `10.0.2.10`     |
+| Màscara          | `255.255.255.0`  |
+| Porta d’enllaç   | `10.0.2.1`   |
+| DNS preferit     | `10.0.2.10`    |
+| Nom del servidor | `SRV-AD-01`   |
+
 ### Part 2. Instal·lació del rol AD DS
 
 Localitzeu i utilitzeu el procediment adequat per instal·lar el rol AD DS i promocionar el servidor a controlador de domini. Documenteu breument les comandes o passos utilitzats.
