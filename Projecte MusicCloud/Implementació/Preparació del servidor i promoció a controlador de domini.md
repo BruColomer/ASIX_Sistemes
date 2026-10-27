@@ -108,15 +108,26 @@ Completeu la taula següent. Adjunta la comanda que has utilitzat per a cada una
 Responeu breument:
 
 1. Per què `SRV-AD-01` necessita una IP fixa?
-    
+
+>Perque es on apunta el dns si aquesta adreça canvia els clients i altres components no es podran conectar. 
+
 2. Per què és necessari DNS en un domini Active Directory?
+
+>Perque sense el dns els recursos / clients no poden detectar el servidor de AD i on podran registrar-se. 
     
 3. Quina diferència hi ha entre instal·lar AD DS i promocionar el servidor a controlador de domini?
+
+>Si nomes l'instales encara faltara configurar tot l'ho necesari com hara el dns. 
     
 4. Quin és el nom del domini creat?
+
+>musicloud.local
     
 5. Quin és el nom NetBIOS del domini?
+
+>musicloud
     
 6. Per què no és recomanable que els clients del domini utilitzin un DNS extern com a DNS principal?
-    
+
+>Perque aquest no reconeixari el servidor de ad. 
 
