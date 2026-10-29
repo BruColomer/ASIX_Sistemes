@@ -15,5 +15,8 @@
 >📄 [4.crear_ou_ordre.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/4.crear_ou_ordre.ps1>)
 
 - El nom de l'OU sigui obligatori i que la ruta si no s'especifica prengui un valor per defecte.
+
+>📄 [5.crear_ou_obligatori.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/5.crear_ou_obligatori.ps1>)
+
 - L'script ha de funcionar en totes les situacions
 - Que es puguin crear multiples ou a la begada
