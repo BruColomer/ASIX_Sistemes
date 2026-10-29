@@ -20,6 +20,6 @@
 
 - L'script ha de funcionar en totes les situacions
 
->📄 [6.crear_ou_totes_situacions.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/6.crear_ou_totes_situacions.ps1.ps1>)
+>📄 [6.crear_ou_totes_situacions.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/6.crear_ou_totes_situacions.ps1>)
 
 - Que es puguin crear multiples ou a la begada
