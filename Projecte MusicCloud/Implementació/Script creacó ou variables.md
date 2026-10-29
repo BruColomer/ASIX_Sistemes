@@ -11,6 +11,9 @@
 >📄 [3.crear_ou_nom_ruta.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/3.crear_ou_nom_ruta.ps1>)
 
 - Modifica l'script anterior perque l'ordre dels arguments no sigui important.
+
+>📄 [4.crear_ou_ordre.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/4.crear_ou_ordre.ps1>)
+
 - El nom de l'OU sigui obligatori i que la ruta si no s'especifica prengui un valor per defecte.
 - L'script ha de funcionar en totes les situacions
 - Que es puguin crear multiples ou a la begada
