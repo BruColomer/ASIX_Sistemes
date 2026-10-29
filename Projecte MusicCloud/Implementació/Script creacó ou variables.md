@@ -7,6 +7,9 @@
 >📄 [2.crear_ou_nom.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/2.crear_ou_nom.ps1>)
 
 - Crear un script on el nom i la ruta son variables
+
+>📄 [3.crear_ou_nom_ruta.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/3.crear_ou_nom_ruta.ps1>)
+
 - Modifica l'script anterior perque l'ordre dels arguments no sigui important.
 - El nom de l'OU sigui obligatori i que la ruta si no s'especifica prengui un valor per defecte.
 - L'script ha de funcionar en totes les situacions
