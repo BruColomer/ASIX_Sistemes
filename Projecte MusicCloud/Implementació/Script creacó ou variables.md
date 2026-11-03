@@ -26,3 +26,8 @@
 
 >📄 [7.crear_ou_multiples.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/7.crear_ou_multiples.ps1>)
 
+- Fer servir funcions dins l'script
+
+>📄 [8.Crear_ou_multiples_funcions.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/8.Crear_ou_multiples_funcions.ps1>)
+
+Ho he provat dins una ou que es diu `Proves`. Amb una ou nova la crea, si ja existeix no fa res, amb `A,B,C` les crea totes tres, amb una ruta que no existeix surt sense crear res, i si no poso `-nomOU` em demana el nom.

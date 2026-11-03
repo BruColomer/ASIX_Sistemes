@@ -14,26 +14,42 @@ function provarruta {
     }
 }
 
+function buscar-ou {
+    param(
+        [parameter(mandatory=$true)]
+        [string]$nom
+    )
+    try {
+        $OU = Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop
+    }
+    catch {
+        $OU = $null
+    }
+    return $OU
+}
+
+function crear-ou {
+    param(
+        [parameter(mandatory=$true)]
+        [string]$nom
+    )
+    try {
+        New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction Stop
+    }
+    catch {
+        return
+    }
+}
+
 ################# Main ##################
 
 provarruta
 
 # Recorrem cada nom d'OU
 foreach ($nom in $nomOU) {
-    try {
-        $OU = Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop
-    }
-    catch {
-        #si no existeix borrem el contigut de ou
-        $OU = $null
-    }
+    $OU = buscar-ou -nom $nom
 
     if (-not $OU) {
-        try {
-            New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction Stop
-        }
-        catch {
-            continue
-        }
+        crear-ou -nom $nom
     }
 }
