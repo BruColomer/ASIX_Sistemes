@@ -137,3 +137,14 @@ Ha funcionat, crea la ou MusicCloud amb Usuaris, Equips i Grups.
 - 7.4. Crea un script que creï l'OU principal si no existeix i que creï únicament les UO descendents que encara no existeixin. El script s'ha de poder executar més d'una vegada sense generar errors ni duplicar objectes.
 
 >📄 [crear_ou_si_no_existeix.ps1](<Scripts/Unitats organitzatives/crear_ou_si_no_existeix.ps1>)
+
+Proves (no te variables, sempre s'executa igual):
+
+```powershell
+.\crear_ou_si_no_existeix.ps1
+```
+
+- Sense cap ou: ha funcionat, crea MusicCloud, Usuaris, Equips i Grups.
+- Segona vegada amb tot creat: ha funcionat, no dona errors ni duplica res.
+- Esborrant nomes la ou Grups: ha funcionat, crea nomes Grups i deixa les altres com estaven.
+- Esborrant tota l'estructura: ha funcionat, ho crea tot un altre cop.
