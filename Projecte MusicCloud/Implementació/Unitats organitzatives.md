@@ -106,6 +106,13 @@ Responeu breument:
 
 >📄 [eliminar_totes_ou.ps1](<Scripts/Unitats organitzatives/eliminar_totes_ou.ps1>)
 
+
+```powershell
+.\eliminar_totes_ou.ps1
+```
+
+Ha funcionat, esborra totes les ou.
+
 - 7.2. Crea un script que crei l'OU principal (musiccloud).
 
 >📄 [crear_ou_principal.ps1](<Scripts/Unitats organitzatives/crear_ou_principal.ps1>)
