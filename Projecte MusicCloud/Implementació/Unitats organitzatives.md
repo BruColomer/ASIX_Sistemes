@@ -117,6 +117,12 @@ Ha funcionat, esborra totes les ou.
 
 >📄 [crear_ou_principal.ps1](<Scripts/Unitats organitzatives/crear_ou_principal.ps1>)
 
+```powershell
+.\crear_ou_principal.ps1
+```
+
+Ha funcionat, crea la ou MusicCloud.
+
 - 7.3. Crea un script que crei l'OU principal i les OUs descendents: Usuaris, Equips i Grups
 
 >📄 [crear_ou_principal_i_descendents.ps1](<Scripts/Unitats organitzatives/crear_ou_principal_i_descendents.ps1>)
