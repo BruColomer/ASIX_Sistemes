@@ -14,6 +14,19 @@ Ha funcionat, crea la ou Prova dins MusicCloud.
 
 >📄 [2.crear_ou_nom.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/2.crear_ou_nom.ps1>)
 
+Proves:
+
+```powershell
+.\2.crear_ou_nom.ps1 -nom Prova2
+.\2.crear_ou_nom.ps1 Prova3
+.\2.crear_ou_nom.ps1 -nom Prova2
+.\2.crear_ou_nom.ps1 -nom Usuaris
+.\2.crear_ou_nom.ps1 -nom ""
+.\2.crear_ou_nom.ps1
+```
+
+Amb `-nom` ha funcionat i crea la ou Prova2 dins MusicCloud. Sense `-nom`, nomes amb el valor, tambe ha funcionat i crea la ou Prova3. Si la ou ja existeix dona error i no crea res, i si el nom esta buit o no es posa tambe dona error.
+
 - Crear un script on el nom i la ruta son variables
 
 >📄 [3.crear_ou_nom_ruta.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/3.crear_ou_nom_ruta.ps1>)
