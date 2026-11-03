@@ -47,6 +47,15 @@ Amb `-nom` i `-ruta` ha funcionat i crea la ou Prova1 dins MusicCloud, i sense p
 
 >📄 [4.crear_ou_ordre.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/4.crear_ou_ordre.ps1>)
 
+Proves:
+
+```powershell
+.\4.crear_ou_ordre.ps1 -nom Prova1 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\4.crear_ou_ordre.ps1 -ruta "OU=MusicCloud,DC=musiccloud,DC=local" -nom Prova2
+```
+
+Les dues han funcionat i creen la ou dins MusicCloud, tant si es posa primer `-nom` (Prova1) com si es posa primer `-ruta` (Prova2).
+
 - El nom de l'OU sigui obligatori i que la ruta si no s'especifica prengui un valor per defecte.
 
 >📄 [5.crear_ou_obligatori.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/5.crear_ou_obligatori.ps1>)
