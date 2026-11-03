@@ -17,19 +17,31 @@ Ha funcionat, crea la ou Prova dins MusicCloud.
 Proves:
 
 ```powershell
-.\2.crear_ou_nom.ps1 -nom Prova2
-.\2.crear_ou_nom.ps1 Prova3
-.\2.crear_ou_nom.ps1 -nom Prova2
+.\2.crear_ou_nom.ps1 -nom Prova1
+.\2.crear_ou_nom.ps1 Prova2
+.\2.crear_ou_nom.ps1 -nom Prova1
 .\2.crear_ou_nom.ps1 -nom Usuaris
 .\2.crear_ou_nom.ps1 -nom ""
 .\2.crear_ou_nom.ps1
 ```
 
-Amb `-nom` ha funcionat i crea la ou Prova2 dins MusicCloud. Sense `-nom`, nomes amb el valor, tambe ha funcionat i crea la ou Prova3. Si la ou ja existeix dona error i no crea res, i si el nom esta buit o no es posa tambe dona error.
+Amb `-nom` ha funcionat i crea la ou Prova1 dins MusicCloud. Sense `-nom`, nomes amb el valor, tambe ha funcionat i crea la ou Prova2. Si la ou ja existeix dona error i no crea res, i si el nom esta buit o no es posa tambe dona error.
 
 - Crear un script on el nom i la ruta son variables
 
 >📄 [3.crear_ou_nom_ruta.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/3.crear_ou_nom_ruta.ps1>)
+
+Proves:
+
+```powershell
+.\3.crear_ou_nom_ruta.ps1 -nom Prova1 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\3.crear_ou_nom_ruta.ps1 Prova2 "OU=MusicCloud,DC=musiccloud,DC=local"
+.\3.crear_ou_nom_ruta.ps1 -nom Prova1 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\3.crear_ou_nom_ruta.ps1 -nom Prova3 -ruta "OU=NoExisteix,DC=musiccloud,DC=local"
+.\3.crear_ou_nom_ruta.ps1 "OU=MusicCloud,DC=musiccloud,DC=local" Prova4
+```
+
+Amb `-nom` i `-ruta` ha funcionat i crea la ou Prova1 dins MusicCloud, i sense posar els noms (primer el nom i despres la ruta) tambe, crea Prova2. Si la ou ja existeix o la ruta no existeix dona error i no crea res. Si es canvia l'ordre sense posar els noms dona error, perque agafa la ruta com a nom: l'ordre importa.
 
 - Modifica l'script anterior perque l'ordre dels arguments no sigui important.
 
