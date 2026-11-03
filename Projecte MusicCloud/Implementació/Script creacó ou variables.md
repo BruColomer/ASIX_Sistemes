@@ -25,3 +25,4 @@
 - Que es puguin crear multiples ou a la begada
 
 >📄 [7.crear_ou_multiples.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/7.crear_ou_multiples.ps1>)
+
