@@ -30,4 +30,18 @@
 
 >📄 [8.Crear_ou_multiples_funcions.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/8.Crear_ou_multiples_funcions.ps1>)
 
-Ho he provat dins una ou que es diu `Proves`. Amb una ou nova la crea, si ja existeix no fa res, amb `A,B,C` les crea totes tres, amb una ruta que no existeix surt sense crear res, i si no poso `-nomOU` em demana el nom.
+Proves:
+
+```powershell
+.\8.Crear_ou_multiples_funcions.ps1 -nomOU Nova1 -ruta "OU=Proves,DC=musiccloud,DC=local"
+.\8.Crear_ou_multiples_funcions.ps1 -nomOU Nova1 -ruta "OU=Proves,DC=musiccloud,DC=local"
+.\8.Crear_ou_multiples_funcions.ps1 -nomOU A,B,C -ruta "OU=Proves,DC=musiccloud,DC=local"
+.\8.Crear_ou_multiples_funcions.ps1 -nomOU X -ruta "OU=NoExisteix,DC=musiccloud,DC=local"
+.\8.Crear_ou_multiples_funcions.ps1 -ruta "OU=Proves,DC=musiccloud,DC=local"
+```
+
+- Una ou nova: ha funcionat, la crea.
+- La mateixa ou un altre cop: ha funcionat, no la duplica ni dona error.
+- Diverses ou a la vegada: ha funcionat, crea A, B i C.
+- Ruta que no existeix: ha funcionat, l'escript surt i no crea res.
+- Sense `-nomOU`: ha funcionat, em demana el nom de la ou.
