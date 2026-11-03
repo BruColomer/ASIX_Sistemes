@@ -89,6 +89,16 @@ Ha funcionat i no mostra cap error en cap cas. Crea la ou Prova1 dins MusicCloud
 
 >📄 [7.crear_ou_multiples.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/7.crear_ou_multiples.ps1>)
 
+Proves:
+
+```powershell
+.\7.crear_ou_multiples.ps1 -nomOU Prova1,Prova2,Prova3 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\7.crear_ou_multiples.ps1 -nomOU Prova1,Prova2,Prova3 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\7.crear_ou_multiples.ps1 -nomOU Prova1,Prova4 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+```
+
+Ha funcionat i no mostra cap error. Amb tres noms crea les tres ou dins MusicCloud (Prova1, Prova2 i Prova3), si es torna a executar amb els mateixos noms no fa res ni les duplica, i si n'hi ha una d'existent i una de nova (Prova1 i Prova4) crea nomes la nova.
+
 - Fer servir funcions dins l'script
 
 >📄 [8.Crear_ou_multiples_funcions.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/8.Crear_ou_multiples_funcions.ps1>)
@@ -96,15 +106,10 @@ Ha funcionat i no mostra cap error en cap cas. Crea la ou Prova1 dins MusicCloud
 Proves:
 
 ```powershell
-.\8.Crear_ou_multiples_funcions.ps1 -nomOU Nova1 -ruta "OU=Proves,DC=musiccloud,DC=local"
-.\8.Crear_ou_multiples_funcions.ps1 -nomOU Nova1 -ruta "OU=Proves,DC=musiccloud,DC=local"
-.\8.Crear_ou_multiples_funcions.ps1 -nomOU A,B,C -ruta "OU=Proves,DC=musiccloud,DC=local"
-.\8.Crear_ou_multiples_funcions.ps1 -nomOU X -ruta "OU=NoExisteix,DC=musiccloud,DC=local"
-.\8.Crear_ou_multiples_funcions.ps1 -ruta "OU=Proves,DC=musiccloud,DC=local"
+.\8.Crear_ou_multiples_funcions.ps1 -nomOU Prova1,Prova2,Prova3 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\8.Crear_ou_multiples_funcions.ps1 -nomOU Prova1,Prova2,Prova3 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\8.Crear_ou_multiples_funcions.ps1 -nomOU Prova1,Prova4 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\8.Crear_ou_multiples_funcions.ps1 -nomOU Prova5 -ruta "OU=NoExisteix,DC=musiccloud,DC=local"
 ```
 
-- Una ou nova: ha funcionat, la crea.
-- La mateixa ou un altre cop: ha funcionat, no la duplica ni dona error.
-- Diverses ou a la vegada: ha funcionat, crea A, B i C.
-- Ruta que no existeix: ha funcionat, l'escript surt i no crea res.
-- Sense `-nomOU`: ha funcionat, em demana el nom de la ou.
+Ha funcionat igual que el 7 i no mostra cap error. Amb tres noms crea les tres ou, si es torna a executar no les duplica, amb una existent i una nova crea nomes la nova, i amb una ruta que no existeix la funcio provarruta fa que l'escript surti i no crea res.
