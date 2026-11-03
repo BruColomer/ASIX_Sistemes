@@ -2,6 +2,14 @@
 
 >📄 [1.crear_ou_variables.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/1.crear_ou_variables.ps1>)
 
+Prova:
+
+```powershell
+.\1.crear_ou_variables.ps1
+```
+
+Ha funcionat, crea la ou Prova dins MusicCloud.
+
 - Crear un script que crei una ou amb nomes el nom de la ou com a dada d'entrada
 
 >📄 [2.crear_ou_nom.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/2.crear_ou_nom.ps1>)
