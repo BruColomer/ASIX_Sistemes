@@ -60,6 +60,16 @@ Les dues han funcionat i creen la ou dins MusicCloud, tant si es posa primer `-n
 
 >📄 [5.crear_ou_obligatori.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/5.crear_ou_obligatori.ps1>)
 
+Proves:
+
+```powershell
+.\5.crear_ou_obligatori.ps1 -nom Prova1
+.\5.crear_ou_obligatori.ps1 -nom Prova2 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\5.crear_ou_obligatori.ps1
+```
+
+Sense `-ruta` ha funcionat i crea la ou Prova1 a l'arrel del domini, que es el valor per defecte, i amb `-ruta` la crea on se li diu (Prova2 dins MusicCloud). Sense `-nom` el demana per pantalla i en escriure Prova3 la crea tambe a l'arrel.
+
 - L'script ha de funcionar en totes les situacions
 
 >📄 [6.crear_ou_totes_situacions.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/6.crear_ou_totes_situacions.ps1>)
