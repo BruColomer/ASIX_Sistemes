@@ -74,6 +74,17 @@ Sense `-ruta` ha funcionat i crea la ou Prova1 a l'arrel del domini, que es el v
 
 >📄 [6.crear_ou_totes_situacions.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/6.crear_ou_totes_situacions.ps1>)
 
+Proves:
+
+```powershell
+.\6.crear_ou_totes_situacions.ps1 -nomOU Prova1 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\6.crear_ou_totes_situacions.ps1 -nomOU Prova1 -ruta "OU=MusicCloud,DC=musiccloud,DC=local"
+.\6.crear_ou_totes_situacions.ps1 -nomOU Prova2 -ruta "OU=NoExisteix,DC=musiccloud,DC=local"
+.\6.crear_ou_totes_situacions.ps1 -nomOU Prova3
+```
+
+Ha funcionat i no mostra cap error en cap cas. Crea la ou Prova1 dins MusicCloud, i si es torna a executar no fa res ni la duplica. Amb una ruta que no existeix l'escript surt i no crea res. Sense `-ruta` crea la ou Prova3 a l'arrel del domini.
+
 - Que es puguin crear multiples ou a la begada
 
 >📄 [7.crear_ou_multiples.ps1](<Scripts/Unitats organitzatives/Script creacio ou variables/7.crear_ou_multiples.ps1>)
