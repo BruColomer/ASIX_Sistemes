@@ -1,0 +1,15 @@
+Crear un script que creï grups de seguretat, un o diversos a la vegada, dins la ou Grups
+
+>📄 [crear_grups.ps1](<Scripts/Grups/crear_grups.ps1>)
+
+Proves:
+
+```powershell
+.\crear_grups.ps1 GR_Direccio
+.\crear_grups.ps1 GR_Direccio
+.\crear_grups.ps1 -llista_grups GR_Administracio,GR_Suport_Tecnic,GR_Produccio_Musical,GR_Informatica,GR_Externs,GR_Campanya_Estiu
+.\crear_grups.ps1 -llista_grups GR_Administracio_Caps,GR_Suport_Tecnic_Caps,GR_Produccio_Musical_Caps,GR_Informatica_Admins
+.\crear_grups.ps1 -llista_grups GR_Prova -ruta_grups "OU=NoExisteix,DC=musiccloud,DC=local"
+```
+
+Ha funcionat i no mostra cap error. Sense `-ruta_grups` crea el grup GR_Direcio dins la ou Grups, i si es torna a ecutar no fa res ni el duplica. Amb diversos noms els crea tots a la vegada, primer els sis grups dels departaments i despres els quatre dels caps i dels administradors. Amb una ruta que no existeix lescript surt i no crea res. Tots els grups queden de tipus seguretat i d'ambit global.
