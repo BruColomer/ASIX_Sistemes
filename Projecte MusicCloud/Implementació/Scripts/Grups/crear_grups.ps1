@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory=$true)]
-    [string]$nom_grup,
+    [string[]]$llista_grups,
     [Parameter(Mandatory=$false)]
     [string]$ruta_grups = "OU=Grups,OU=MusicCloud,DC=musiccloud,DC=local"
 )
@@ -15,6 +15,10 @@ function provarruta {
 }
 
 function buscar-grup {
+    param(
+        [parameter(mandatory=$true)]
+        [string]$nom_grup
+    )
     try {
         $grup_trobat = Get-ADGroup -Identity $nom_grup -ErrorAction Stop
     }
@@ -25,6 +29,10 @@ function buscar-grup {
 }
 
 function crear-grup {
+    param(
+        [parameter(mandatory=$true)]
+        [string]$nom_grup
+    )
     try {
         New-ADGroup -Name $nom_grup -GroupScope Global -GroupCategory Security -Path $ruta_grups -ErrorAction Stop
     }
@@ -33,10 +41,15 @@ function crear-grup {
     }
 }
 
+################# Main ##################
+
 provarruta
 
-$grup_trobat = buscar-grup
+# Recorrem cada nom de grup
+foreach ($nom_grup in $llista_grups) {
+    $grup_trobat = buscar-grup -nom_grup $nom_grup
 
-if (-not $grup_trobat) {
-    crear-grup
+    if (-not $grup_trobat) {
+        crear-grup -nom_grup $nom_grup
+    }
 }
