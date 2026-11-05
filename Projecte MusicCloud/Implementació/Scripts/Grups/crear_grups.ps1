@@ -14,6 +14,20 @@ function provarruta {
     }
 }
 
+function buscar-grup {
+    try {
+        $grup_trobat = Get-ADGroup -Identity $nom_grup -ErrorAction Stop
+    }
+    catch {
+        $grup_trobat = $null
+    }
+    return $grup_trobat
+}
+
 provarruta
 
-New-ADGroup -Name $nom_grup -GroupScope Global -GroupCategory Security -Path $ruta_grups
+$grup_trobat = buscar-grup
+
+if (-not $grup_trobat) {
+    New-ADGroup -Name $nom_grup -GroupScope Global -GroupCategory Security -Path $ruta_grups
+}
