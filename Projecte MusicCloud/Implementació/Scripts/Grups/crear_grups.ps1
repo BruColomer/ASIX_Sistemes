@@ -24,10 +24,19 @@ function buscar-grup {
     return $grup_trobat
 }
 
+function crear-grup {
+    try {
+        New-ADGroup -Name $nom_grup -GroupScope Global -GroupCategory Security -Path $ruta_grups -ErrorAction Stop
+    }
+    catch {
+        return
+    }
+}
+
 provarruta
 
 $grup_trobat = buscar-grup
 
 if (-not $grup_trobat) {
-    New-ADGroup -Name $nom_grup -GroupScope Global -GroupCategory Security -Path $ruta_grups
+    crear-grup
 }
