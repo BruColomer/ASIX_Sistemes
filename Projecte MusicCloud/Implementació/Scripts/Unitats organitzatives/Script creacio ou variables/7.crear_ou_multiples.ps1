@@ -12,13 +12,11 @@ catch {
     exit
 }
 
-# Recorrem cada nom d'OU
 foreach ($nom in $nomOU) {
     try {
         $OU = Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop
     }
     catch {
-        #si no existeix borrem el contigut de ou
         $OU = $null
     }
 
