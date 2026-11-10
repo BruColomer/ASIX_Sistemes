@@ -113,3 +113,19 @@ Proves:
 ```
 
 Ha funcionat igual que el 7 i no mostra cap error. Amb tres noms crea les tres ou, si es torna a executar no les duplica, amb una existent i una nova crea nomes la nova, i amb una ruta que no existeix la funcio provarruta fa que l'escript surti i no crea res.
+
+- Que els noms de les ou es llegeixin d'un fitxer CSV en comptes de posar-los a ma
+
+>📄 [Crear_ou_multiples.ps1](<Scripts/Scripts amb fitxers/Crear_ou_multiples.ps1>)
+>📄 [uo_a_crear.csv](<Scripts/Scripts amb fitxers/Dades/uo_a_crear.csv>)
+
+Proves:
+
+```powershell
+.\Crear_ou_multiples.ps1 -ruta "OU=Proves,DC=musiccloud,DC=local"
+.\Crear_ou_multiples.ps1 -ruta "OU=Proves,DC=musiccloud,DC=local"
+.\Crear_ou_multiples.ps1 -fitxer "C:\Users\Administrator\Scripts\Scripts amb fitxers\Dades\noexisteix.csv" -ruta "OU=Proves,DC=musiccloud,DC=local"
+.\Crear_ou_multiples.ps1 -ruta "OU=NoExisteix,DC=musiccloud,DC=local"
+```
+
+Ha funcionat i no mostra cap error. Sense `-fitxer` llegeix el CSV per defecte i crea les sis ou que hi ha (Direccio, Administracio, Suport_Tecnic, Produccio_Musical, Informatica i Externs) dins la ruta, i si es tora a executar no les duplica. Amb un fitxer que no existeix o amb una ruta que no existeix, la funcio corresponent fa que l'escript surti i no crea res.
