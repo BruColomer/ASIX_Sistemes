@@ -1,10 +1,18 @@
 param(
-    [Parameter(Mandatory=$true)]
-    [string[]]$llista_grups,
+    [Parameter(Mandatory=$false)]
+    [string]$fitxer = "C:\Users\Administrator\Scripts\Scripts amb fitxers\Dades\grups_a_crear.csv",
     [Parameter(Mandatory=$false)]
     [string]$ruta_grups = "OU=Grups,OU=MusicCloud,DC=musiccloud,DC=local"
 )
 
+function provarfitxer {
+    try {
+        $existeix = Get-Item "$fitxer" -ErrorAction Stop
+    }
+    catch {
+        exit
+    }
+}
 function provarruta {
     try {
         $existeix = Get-ADObject -Identity "$ruta_grups" -ErrorAction Stop
@@ -13,7 +21,6 @@ function provarruta {
         exit
     }
 }
-
 function buscar-grup {
     param(
         [parameter(mandatory=$true)]
@@ -27,7 +34,6 @@ function buscar-grup {
     }
     return $grup_trobat
 }
-
 function crear-grup {
     param(
         [parameter(mandatory=$true)]
@@ -43,10 +49,11 @@ function crear-grup {
 
 ################# Main ##################
 
+provarfitxer
 provarruta
 
-# Recorrem cada nom de grup
-foreach ($nom_grup in $llista_grups) {
+# Recorrem cada nom de grup del CSV
+foreach ($nom_grup in (Import-Csv $fitxer).GRUP) {
     $grup_trobat = buscar-grup -nom_grup $nom_grup
 
     if (-not $grup_trobat) {
