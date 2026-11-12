@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory=$false)]
-    [string]$fitxer = "C:\Users\Administrator\Scripts\Scripts amb fitxers\Dades\grups_a_crear.csv",
+    [string]$fitxer = "C:\Users\Administrator\Scripts\Dades\grups_a_crear.csv",
     [Parameter(Mandatory=$false)]
     [string]$ruta_grups = "OU=Grups,OU=MusicCloud,DC=musiccloud,DC=local"
 )
