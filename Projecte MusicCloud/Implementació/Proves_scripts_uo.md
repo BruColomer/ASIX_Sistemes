@@ -122,10 +122,11 @@ Ha funcionat igual que el 7 i no mostra cap error. Amb tres noms crea les tres o
 Proves:
 
 ```powershell
-.\crear_ou_multiples_fitxer.ps1 -ruta "OU=Proves,DC=musiccloud,DC=local"
-.\crear_ou_multiples_fitxer.ps1 -ruta "OU=Proves,DC=musiccloud,DC=local"
-.\crear_ou_multiples_fitxer.ps1 -fitxer "C:\Users\Administrator\Scripts\Dades\noexisteix.csv" -ruta "OU=Proves,DC=musiccloud,DC=local"
-.\crear_ou_multiples_fitxer.ps1 -ruta "OU=NoExisteix,DC=musiccloud,DC=local"
+.\crear_ou_multiples_fitxer.ps1
+.\crear_ou_multiples_fitxer.ps1 -fitxer "C:\Users\Administrator\Scripts\Dades\proves_uo.csv"
+.\crear_ou_multiples_fitxer.ps1 -fitxer "C:\Users\Administrator\Scripts\Dades\proves_uo.csv"
+.\crear_ou_multiples_fitxer.ps1 -fitxer "C:\Users\Administrator\Scripts\Dades\proves_ruta.csv"
+.\crear_ou_multiples_fitxer.ps1 -fitxer "C:\Users\Administrator\Scripts\Dades\noexisteix.csv"
 ```
 
-Ha funcionat i no mostra cap error. Sense `-fitxer` llegeix el CSV per defecte i crea les sis ou que hi ha (Direccio, Administracio, Suport_Tecnic, Produccio_Musical, Informatica i Externs) dins la ruta, i si es tora a executar no les duplica. Amb un fitxer que no existeix o amb una ruta que no existeix, la funcio corresponent fa que l'escript surti i no crea res.
+Ha funcionat i no mostra cap error. Sense `-fitxer` llegeix el CSV per defecte, amb les 14 uo i la ruta de cadascuna, i no crea res perque ja existeixen. Amb un CSV de proves crea cada uo a la ruta que diu el fitxer (UO_Prova1 i UO_Prova2 a la mateixa ruta i UO_Prova3 dins UO_Prova1), i si es torna a executar no les duplica. Si la ruta del fitxer no existeix, la uo es crea dins UO_MusicCloud (UO_Prova4). Amb un fitxer que no existeix l'escript surt i no crea res.
