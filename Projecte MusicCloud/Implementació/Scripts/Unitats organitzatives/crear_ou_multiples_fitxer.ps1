@@ -10,20 +10,35 @@ $ruta_per_defecte = "OU=UO_MusicCloud,DC=musiccloud,DC=local"
 function provar_ruta_logs {
     if (-not (Test-Path $logs)) {
         try {
-            New-Item -ItemType Directory -Path $logs -ErrorAction Stop
+            New-Item -ItemType Directory -Path $logs -ErrorAction Stop | Out-Null
         }
         catch {
             exit
         }
     }
     if (-not (Test-Path "$logs\crear_ou.log")) {
-        New-Item -ItemType File -Path "$logs\crear_ou.log"
+        New-Item -ItemType File -Path "$logs\crear_ou.log" | Out-Null
     }
     if (-not (Test-Path "$logs\crear_ou.warn")) {
-        New-Item -ItemType File -Path "$logs\crear_ou.warn"
+        New-Item -ItemType File -Path "$logs\crear_ou.warn" | Out-Null
     }
     if (-not (Test-Path "$logs\crear_ou.err")) {
-        New-Item -ItemType File -Path "$logs\crear_ou.err"
+        New-Item -ItemType File -Path "$logs\crear_ou.err" | Out-Null
+    }
+}
+function registrar_log {
+    param(
+        [parameter(mandatory=$true)]
+        [string]$nivell,
+        [parameter(mandatory=$true)]
+        [string]$missatge
+    )
+    $data = get-date -format "yyyy-MM-dd HH:mm:ss"
+
+    switch ($nivell) {
+        "INFO" { Write-Information "$data [INFO] $missatge" 6>> "$logs\crear_ou.log" }
+        "WARN" { Write-Warning "$data [WARN] $missatge" 3>> "$logs\crear_ou.warn" }
+        "ERR" { Write-Error "$data [ERR] $missatge" 2>> "$logs\crear_ou.err" }
     }
 }
 function provarfitxer {
@@ -31,6 +46,7 @@ function provarfitxer {
         $existeix = Get-Item "$fitxer" -ErrorAction Stop
     }
     catch {
+        registrar_log "ERR" "$_"
         exit
     }
 }
@@ -73,14 +89,16 @@ function crear-uo {
         New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction Stop
     }
     catch {
+        registrar_log "ERR" "$_"
         return
     }
+    registrar_log "INFO" "UO $nom creada a $ruta"
 }
 
 ################# Main ##################
-$data = get-date -format "yyyy-MM-dd HH:mm:ss"
 
 provar_ruta_logs
+registrar_log "INFO" "Escrit executat"
 provarfitxer
 
 # Recorrem cada fila del CSV (nom d'UO i ruta)
@@ -90,6 +108,7 @@ foreach ($fila in (Import-Csv $fitxer)) {
 
     # Si la ruta no existeix, l'UO va dins d'UO_MusicCloud
     if (-not (provarruta -ruta $ruta)) {
+        registrar_log "WARN" "No existeis la $ruta es canvia per la de defecte"
         $ruta = $ruta_per_defecte
     }
 
@@ -99,4 +118,9 @@ foreach ($fila in (Import-Csv $fitxer)) {
     if (-not $UO) {
         crear-uo -nom $nom -ruta $ruta
     }
+    else {
+        registrar_log "INFO" "La UO $nom ja existeix"
+    }
 }
+
+registrar_log "INFO" "Final de l'escript"
