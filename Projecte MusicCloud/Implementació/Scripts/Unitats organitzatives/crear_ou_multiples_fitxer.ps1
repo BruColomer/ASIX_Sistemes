@@ -2,10 +2,30 @@ param(
     [Parameter(Mandatory=$false)]
     [string]$fitxer = "C:\Users\Administrator\Scripts\Dades\uo_a_crear.csv"
 )
+$logs = "C:\Users\Administrator\Scripts\Logs\crear_ou_multiples_fitxer"
 
-# Si la ruta del CSV no existeix, l'UO es crea dins d'aquesta
+# Si la ruta no existeix, l'UO es crea dins d'aquesta
 $ruta_per_defecte = "OU=UO_MusicCloud,DC=musiccloud,DC=local"
 
+function provar_ruta_logs {
+    if (-not (Test-Path $logs)) {
+        try {
+            New-Item -ItemType Directory -Path $logs -ErrorAction Stop
+        }
+        catch {
+            exit
+        }
+    }
+    if (-not (Test-Path "$logs\crear_ou.log")) {
+        New-Item -ItemType File -Path "$logs\crear_ou.log"
+    }
+    if (-not (Test-Path "$logs\crear_ou.warn")) {
+        New-Item -ItemType File -Path "$logs\crear_ou.warn"
+    }
+    if (-not (Test-Path "$logs\crear_ou.err")) {
+        New-Item -ItemType File -Path "$logs\crear_ou.err"
+    }
+}
 function provarfitxer {
     try {
         $existeix = Get-Item "$fitxer" -ErrorAction Stop
@@ -58,7 +78,9 @@ function crear-uo {
 }
 
 ################# Main ##################
+$data = get-date -format "yyyy-MM-dd HH:mm:ss"
 
+provar_ruta_logs
 provarfitxer
 
 # Recorrem cada fila del CSV (nom d'UO i ruta)
@@ -71,7 +93,7 @@ foreach ($fila in (Import-Csv $fitxer)) {
         $ruta = $ruta_per_defecte
     }
 
-    # Si la uo existeix no es crea sino es crea a la ruta indicada
+    # Si la uo existeix no es crea, sino es crea a la ruta indicada
     $UO = buscar-uo -nom $nom -ruta $ruta
 
     if (-not $UO) {
